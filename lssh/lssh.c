@@ -104,12 +104,26 @@ int main(void)
         /* Add your code for implementing the shell's logic here */
         int rc = fork(); 
         if (rc < 0) {
-            (stderr, "Fork Failed"); 
+            fprintf(stderr, "Fork Failed"); 
             exit(1); 
         }
         else if (rc == 0) {
-            execvp(args[0], args);
-            printf("bash: %s: command not found.\n", args[0]); 
+            int result = strcmp(args[0], "cd"); 
+            if (result == 0) {
+                if (args[1] && !args[2]) {
+                    int check_path = chdir(args[1]);
+                    if (check_path < 0) {
+                        printf("bash: cd %s: No such file or directory\n", args[1]); 
+                    }
+                }
+                else if (args[2]) {
+                    printf("bash: cd: too many arguments\n");  
+                }
+            }
+            else {
+                execvp(args[0], args);
+                printf("bash: %s: command not found.\n", args[0]);
+            } 
         }
         else {
             waitpid(rc, NULL, 0); 
