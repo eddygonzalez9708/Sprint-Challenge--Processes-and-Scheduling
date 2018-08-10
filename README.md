@@ -9,7 +9,7 @@ Add your answers inline, below, with your pull request.
 
 A process may be in the following states at any point in time on a standard UNIX system: 
 
-Running – A process is running or it is ready to run.
+1. Running – A process is running or it is ready to run.
 Waiting – A process is waiting for an event to occur or to receive a particular resource. 
 Stopped – A process is halted by a receiving signal. 
 Zombie – A process has completed executing its instruction set but it has not been removed from the process table.  
