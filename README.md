@@ -6,26 +6,26 @@ Add your answers inline, below, with your pull request.
 
 1. List all of the main states a process may be in at any point in time on a
    standard Unix system. Briefly explain what each of these states mean.
-   
-   A process may be in the following states at any point in time on a standard UNIX system: 
-   
-    • Running – A process is running or it is ready to run. 
-    • Waiting – A process is waiting for an event to occur or to receive a particular resource. 
-    • Stopped – A process is halted by a receiving signal. 
-    • Zombie – A process has completed executing its instruction set but it has not been removed from the process table.  
+
+A process may be in the following states at any point in time on a standard UNIX system: 
+
+• Running – A process is running or it is ready to run. 
+• Waiting – A process is waiting for an event to occur or to receive a particular resource. 
+• Stopped – A process is halted by a receiving signal. 
+• Zombie – A process has completed executing its instruction set but it has not been removed from the process table.  
 
 2. What is a Zombie Process? How does it get created? How does it get destroyed?
 
-    A zombie process is a process that had completed its instruction set, but its information 
-    it still kept by the Kernel in case the parent process needs it. Therefore, the process 
-    remains in the process table with a status of ‘Z’. 
+A zombie process is a process that had completed its instruction set, but its information 
+it still kept by the Kernel in case the parent process needs it. Therefore, the process 
+remains in the process table with a status of ‘Z’. 
 
 3. Describe the job of the Scheduler in the OS in general.
 
-    A Job Scheduler is an Operating System program that allocates resources for processes 
-    that are waiting for CPU time. It is able to prioritize queues as well as determine which 
-    processes get executed first from each queue and the amount of CPU time it should allocate 
-    for each process. 
+A Job Scheduler is an Operating System program that allocates resources for processes 
+that are waiting for CPU time. It is able to prioritize queues as well as determine which 
+processes get executed first from each queue and the amount of CPU time it should allocate 
+for each process. 
 
 4. Describe the benefits of the MLFQ over a plain Round-Robin scheduler.
 
